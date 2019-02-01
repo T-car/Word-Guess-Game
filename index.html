@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <!--Google Font-->
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+    <script src="assets/javascript/game.js" type="text/javascript"></script>
+    <title>Psychic Game</title>
+</head>
+<style>
+body {
+    font-family: 'Press Start 2P', cursive;
+    background-image:url("assets/images/Crystal-ball.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#gameStats {
+    color: chartreuse;
+    justify-content: center;
+    text-align: center;
+    padding-top: 50px;
+
+}
+</style>
+<body>
+        <div class="Container">
+            <div id="gameStats">
+                <h1>Psychic Guessing Game</h1>
+                <br>
+                <h3>Guesses Remaining:</h3>
+                <p id= "guessCount"></p>
+                <br>
+                <h3>Letters Guessed:</h3>
+                <p id= "lettersGuessed"></p>
+                <br>
+                <h3>Wins:</h3>
+                <p id= "winCount"></p>
+                <br>
+                <h3>Losses:</h3>
+                <p id= "lossCount"></p>
+                <br>
+            </div>
+        </div>
+              
+</body>
+<footer>
+    <!--linking JS-->
+    <script src="assets/javascript/game.js" type="text/javascript"></script>
+</footer>
+
+</html>
