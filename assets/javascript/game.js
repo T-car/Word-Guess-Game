@@ -1,6 +1,6 @@
 //defining variables//
 var letters = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'];
-var userGuess = [];
+var lettersUsed = [];
 var compGuess;
 var guessRemaining = 10;
 var wins = 0;
@@ -14,9 +14,41 @@ function Guess() {
     compGuess
     console.log(compGuess);
 }
-
-//Defining userGuess when letter is pressed
+//captures user input
 document.onkeyup = function (event) {
-    var userGuess = event.keyPress;
-    console.log(userGuess);
+    var playerGuess = event.key;
+
+//Add 1 to win when user guesses correctly
+if (playerGuess === compGuess) {
+    wins ++;
+    guessRemaining = 10;
+    lettersUsed = []
+}
+//subtract 1 from guesses remaining
+else {
+    guessRemaining --;
+}
+
+//add 1 to losses and reset game when no more guesses left
+if (guessRemaining == 0) {
+    loss++;
+    lettersUsed = []
+    guessRemaining= 10;
+}
+
+//stops user from using same letter twice
+if (lettersUsed.indexOf(playerGuess) >= 0){
+}
+
+//adds letters guessed to <p id=lettersGuessed
+else {
+    lettersUsed.push(playerGuess);
+    document.getElementById('lettersGuessed').innerHTML = lettersUsed;
+    console.log(lettersUsed);
+}
+
+//add values to html
+    document.getElementById('winCount').innerHTML = wins;
+    document.getElementById('lossCount').innerHTML = loss;
+    document.getElementById('guessCount').innerHTML = guessRemaining;
 }

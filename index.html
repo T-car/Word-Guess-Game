@@ -17,13 +17,15 @@ body {
     background-image:url("assets/images/Crystal-ball.jpg");
     background-repeat: no-repeat;
     background-size: cover;
+    line-height: 25px;
 }
 
 #gameStats {
     color: chartreuse;
     justify-content: center;
     text-align: center;
-    padding-top: 50px;
+    padding: 25px 10px;
+    line-height: 20px;
 
 }
 </style>
@@ -31,19 +33,20 @@ body {
         <div class="Container">
             <div id="gameStats">
                 <h1>Psychic Guessing Game</h1>
-                <br>
+                <p>You have 10 tries to correctly guess the the letter I'm thinking of. Choose wisely!</p>
+                    <br>
                 <h3>Guesses Remaining:</h3>
                 <p id= "guessCount"></p>
-                <br>
+
                 <h3>Letters Guessed:</h3>
                 <p id= "lettersGuessed"></p>
-                <br>
+        
                 <h3>Wins:</h3>
                 <p id= "winCount"></p>
-                <br>
+            
                 <h3>Losses:</h3>
                 <p id= "lossCount"></p>
-                <br>
+          
             </div>
         </div>
               
