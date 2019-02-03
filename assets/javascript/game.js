@@ -6,6 +6,7 @@ var guessRemaining = 10;
 var wins = 0;
 var loss = 0;
 
+
 //pick random letter based on array legnth (26 letters)//
 compGuess = letters[Math.floor(Math.random() * letters.length)];
 
@@ -34,11 +35,12 @@ if (guessRemaining == 0) {
     loss++;
     lettersUsed = []
     guessRemaining= 10;
+    document.getElementById('lettersGuessed').innerHTML = lettersUsed;
 }
 
 //stops user from using same letter twice
-if (lettersUsed.indexOf(playerGuess) >= 0){
-}
+// if (lettersUsed.indexOf(playerGuess) >= 0){
+// }
 
 //adds letters guessed to <p id=lettersGuessed
 else {
